@@ -1,7 +1,7 @@
 from jose import jwt, JWTError
 import datetime
 
-# This is a secret key used to sign tokens (in a real app, keep it hidden!)
+# This is a secret key used to sign tokens
 SECRET_KEY = "my-secret-key-change-this-later"
 ALGORITHM = "HS256"
 
