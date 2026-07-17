@@ -6,7 +6,7 @@ from auth import create_token, verify_token
 app = FastAPI()
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
 
-# Temporary storage for users (we'll use a real database later)
+# Temporary storage for users
 users_db = {}
 
 # This defines what a user registration looks like
