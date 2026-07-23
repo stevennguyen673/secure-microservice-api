@@ -2,7 +2,7 @@ import time
 import logging
 
 # Configure logger
-logging.basicConfig(level=logging.INFO, format="%(asctime)s [%(levelname)s] %(message)s")
+logging.basicConfig(level=logging.INFO, format="\n%(asctime)s \n[%(levelname)s] \n%(message)s")
 logger = logging.getLogger("fastapi-service")
 
 
@@ -29,7 +29,7 @@ async def logging_middleware(request, call_next):
         elif status_code < 500:
             severity = logging.WARNING
         else:
-            severity = logging.ERROR
+            severity = logging.ERROR    # Request completed but returned a 500 status
 
 
         # write log
